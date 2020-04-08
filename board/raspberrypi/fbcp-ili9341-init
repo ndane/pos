@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "Starting SLB Driver..."
+    /bin/fbcp-ili9341
+    ;;
+  stop)
+    echo -n "Stopping SLB Driver..."
+    killall fbcp-ili9341
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit $?

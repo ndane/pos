@@ -1,0 +1,6 @@
+config BR2_PACKAGE_FBCP_ILI9341
+	bool "fbcp-ili9341"
+	help
+	  Linux SPI driver for ili9341 screens
+
+	  https://github.com/juj/fbcp-ili9341
